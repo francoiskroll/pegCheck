@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Rscript -e \"shiny::runApp\\('.', launch.browser=TRUE\\)\")",
+      "Bash(nohup Rscript -e \"shiny::runApp\\('.', port=5770, host='127.0.0.1'\\)\")",
+      "Bash(echo \"PID: $!\")",
+      "Bash(sleep 10 && cat /tmp/shiny_pegcheck.log)",
+      "Read(//private/tmp/**)",
+      "Bash(open http://127.0.0.1:5770)",
+      "Bash(pkill -f \"shiny::runApp\")",
+      "Bash(pkill -f \"shiny_pegcheck\")",
+      "Bash(nohup Rscript -e \"shiny::runApp\\('.', port=5770, host='127.0.0.1'\\)\" > /tmp/shiny_pegcheck.log 2>&1 & *)",
+      "Bash(pkill -f \"Rscript.*shiny\")",
+      "Bash(xargs kill -9)"
+    ],
+    "additionalDirectories": [
+      "/private/tmp"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+name: pegcheck
+title:
+username: francoiskroll
+account: francoiskroll
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17378776
+bundleId: 12695367
+url: https://francoiskroll.shinyapps.io/pegcheck/
+version: 1
